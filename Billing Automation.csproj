@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a6b5fc6f-ca83-4aef-a22a-8c86a8bb7860</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Billing Automation</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="itextsharp" />
+    <Reference Include="WebDriver" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="SeleniumExtras.WaitHelpers" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Billing_Automation\Form1.cs" />
+    <Compile Include="Billing_Automation\InvoiceInfo.cs" />
+    <Compile Include="Billing_Automation\PDFParser.cs" />
+    <Compile Include="Billing_Automation\InvoicePrcessor.cs" />
+    <Compile Include="Billing_Automation\Program.cs" />
+    <Compile Include="Billing_Automation\Properties\Resources.cs" />
+    <Compile Include="Billing_Automation\Properties\Settings.cs" />
+    <EmbeddedResource Include="Billing_Automation.Form1.resources" />
+    <EmbeddedResource Include="Billing_Automation.Properties.Resources.resources" />
+  </ItemGroup>
+</Project>
